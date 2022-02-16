@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { getRandomActivity } from './helpers/getRandomActivity';
+import { Header } from './components/header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = () => {
+
+  const [activity, setActivity] = useState([]);
+
+  
+  useEffect(() => {
+      getRandomActivity()
+        .then(setActivity);
+  }, []);
+
+
+
+const handleRandomActivity = () => {
+    getRandomActivity()
+      .then(setActivity);
+  }
+
+  return <>
+      <Header setActivity={setActivity}/> 
+      <main>
+        <h2>{activity.activity}</h2>
+        <h5>key: {activity.key}</h5>
+        <button onClick={handleRandomActivity}><span id="icon-random"></span></button>
+      </main>
+      <footer><a href='https://github.com/35P10/Activity-recommendation-app'><span id='icon-github'></span></a></footer>
+    </>;
+};
+
+
 
 export default App;

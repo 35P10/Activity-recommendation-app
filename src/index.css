@@ -1,3 +1,17 @@
+:root{
+  --header-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +24,190 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header{
+  background-color: #01A7C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  text-align: center;
+}
+
+
+
+footer {
+  background-color: #A3BAC3;
+  height: 2rem;
+}
+
+.search-key-form {
+  width: 70%;
+}
+
+.search-key-form input {
+  width: 50%;
+}
+
+h1 {
+  font-size: 2.6rem;
+  width: 70%;
+  color: #EAEBED;
+}
+
+header button {
+  width: 3rem;
+  height: 3rem;
+}
+
+.search-by-key-button {
+  margin-right: 10px;
+}
+
+.search-by-filter-button {
+  margin-left: 10px;
+}
+
+main {
+  width: 100vw;
+  background-color: #EAEBED;
+  height:calc(100vh - var(--header-height));
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0 0;
+  padding-top: 10rem;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
+}
+
+h5 {
+  margin: 0 0;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 20vw;
+
+  
+}
+
+main span {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+header span {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+footer span {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  top: calc(0.5rem / 2);
+  margin: 0 auto;
+}
+
+
+footer a {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+#icon-seach {
+  background-image: url('./images/search.png');
+}
+
+#icon-filter {
+  background-image: url('./images/filter.png');
+}
+
+#icon-random {
+  background-image: url('./images/random.png');
+}
+
+#icon-github {
+  background-image: url('./images/github.png');
+}
+
+#icon-arrow {
+  background-image: url('./images/arrow.png');
+}
+
+button {
+  display: block;
+  border-style: none;
+  border-radius: 7px;
+  background-color: #007090;
+}
+
+main button {
+  width: 10vw;
+  max-width: 6rem;
+  max-height: 6rem;
+  height: 10vw;
+  top: 75vh;
+  position: absolute;
+  margin: 0 calc( (100vw - 10vw) / 2);
+}
+
+.filter-form {
+    width: 70%;
+    padding: auto;
+}
+
+
+.filter-input-number {
+  width: 0px;
+  display: block;
+  flex-grow: 1;
+
+}
+
+.filter-form-inputs {
+  width: 80%;
+  display: inline-block;
+}
+
+.submit-button {
+  display: inline-block;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.filter-form-inputs-number_row {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+@media (min-width: 819px) {
+  header {
+    background-color: rebeccapurple;
+  }
+}
+
+.filter-input-text {
+  width: 100%;
+  display: block;
 }

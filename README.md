@@ -1,1 +1,0 @@
-# Activity-recommendation-app

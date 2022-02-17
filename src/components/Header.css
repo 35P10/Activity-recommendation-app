@@ -1,0 +1,26 @@
+header{
+    background-color: #01A7C2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    text-align: center;
+  }
+  
+@media (min-width: 819px) {
+    header {
+      background-color: rebeccapurple;
+    }
+}
+
+.submit-button {
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+header button {
+  width: 3rem;
+  height: 3rem;
+}

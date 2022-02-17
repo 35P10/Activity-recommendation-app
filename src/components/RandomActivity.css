@@ -1,0 +1,9 @@
+main button {
+    width: 10vw;
+    max-width: 6rem;
+    max-height: 6rem;
+    height: 10vw;
+    top: 75vh;
+    position: absolute;
+    margin: 0 calc( (100vw - 10vw) / 2);
+}

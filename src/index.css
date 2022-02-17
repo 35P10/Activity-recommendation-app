@@ -26,17 +26,6 @@ code {
     monospace;
 }
 
-header{
-  background-color: #01A7C2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: var(--header-height);
-  text-align: center;
-}
-
-
-
 footer {
   background-color: #A3BAC3;
   height: 2rem;
@@ -56,10 +45,6 @@ h1 {
   color: #EAEBED;
 }
 
-header button {
-  width: 3rem;
-  height: 3rem;
-}
 
 .search-by-key-button {
   margin-right: 10px;
@@ -93,7 +78,7 @@ h5 {
   
 }
 
-main span {
+span {
   margin: 0 auto;
   width: 50%;
   height: 50%;
@@ -103,28 +88,13 @@ main span {
   background-size: cover; 
 }
 
-header span {
-  margin: 0 auto;
-  width: 50%;
-  height: 50%;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-}
 
 footer span {
   position: relative;
   width: 1.5rem;
-  height: 1.5rem;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
+  height: 1.5rem; 
   top: calc(0.5rem / 2);
-  margin: 0 auto;
 }
-
 
 footer a {
   display: block;
@@ -159,55 +129,3 @@ button {
   background-color: #007090;
 }
 
-main button {
-  width: 10vw;
-  max-width: 6rem;
-  max-height: 6rem;
-  height: 10vw;
-  top: 75vh;
-  position: absolute;
-  margin: 0 calc( (100vw - 10vw) / 2);
-}
-
-.filter-form {
-    width: 70%;
-    padding: auto;
-}
-
-
-.filter-input-number {
-  width: 0px;
-  display: block;
-  flex-grow: 1;
-
-}
-
-.filter-form-inputs {
-  width: 80%;
-  display: inline-block;
-}
-
-.submit-button {
-  display: inline-block;
-  margin-left: 10px;
-  width: 20px;
-  height: 20px;
-}
-
-.filter-form-inputs-number_row {
-  margin-top: 5px;
-  width: 100%;
-  display: flex;
-  gap: 5px;
-}
-
-@media (min-width: 819px) {
-  header {
-    background-color: rebeccapurple;
-  }
-}
-
-.filter-input-text {
-  width: 100%;
-  display: block;
-}

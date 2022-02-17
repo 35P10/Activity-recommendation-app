@@ -1,0 +1,32 @@
+.filter-form {
+    width: 70%;
+    padding: auto;
+}
+
+.filter-form-inputs {
+    width: 80%;
+    display: inline-block;
+}
+
+.filter-input-text {
+    width: 100%;
+    display: block;
+}
+      
+.filter-form-inputs-number_row {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.filter-input-number {
+    width: 0px;
+    display: block;
+    flex-grow: 1;
+}
+  
+.search-by-filter-button {
+    margin-left: 10px;
+}
+  

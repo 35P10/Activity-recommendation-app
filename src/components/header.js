@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types'
 import { SearchByKeyBar } from './SearchByKeyBar';
 import { Filter } from './Filter';
+import './Header.css';
 
 export const Header = ({setActivity}) => {
     const [searchdisplay, setsearchdisplay] = useState(false);

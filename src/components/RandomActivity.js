@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {getRandomActivity} from '../helpers/getRandomActivity' 
+import './RandomActivity.css'
 
-
-export const RandomActivity = () => {
-    const [activity, setActivity] = useState([]);
-
-    useEffect(() => {
-      getRandomActivity()
-        .then(setActivity);
-    }, []);
+export const RandomActivity = ({setActivity}) => {
   
-  
-    const handleActivity = () => {
-      getRandomActivity()
-        .then(setActivity);
-    }
+  const handleRandomActivity = () => {
+    getRandomActivity()
+      .then(setActivity);
+  };
       
-  
-    return <div>
-        <button onClick={handleActivity}>Actividad Aleatoria</button>
-        <h3>{activity.activity}</h3>
-      </div>;
+  return <button onClick={handleRandomActivity}><span id="icon-random"></span></button>;
 };
 
 export default RandomActivity;

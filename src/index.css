@@ -21,16 +21,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-footer {
-  background-color: #A3BAC3;
-  height: 2rem;
-}
-
 .search-key-form {
   width: 70%;
 }
@@ -39,43 +29,12 @@ footer {
   width: 50%;
 }
 
-h1 {
-  font-size: 2.6rem;
-  width: 70%;
-  color: #EAEBED;
-}
-
-
 .search-by-key-button {
   margin-right: 10px;
 }
 
 .search-by-filter-button {
   margin-left: 10px;
-}
-
-main {
-  width: 100vw;
-  background-color: #EAEBED;
-  height:calc(100vh - var(--header-height));
-}
-
-h2 {
-  font-size: 3rem;
-  margin: 0 0;
-  padding-top: 10rem;
-  padding-left: 10vw;
-  padding-right: 10vw;
-
-}
-
-h5 {
-  margin: 0 0;
-  text-align: right;
-  padding-top: 20px;
-  padding-right: 20vw;
-
-  
 }
 
 span {
@@ -88,19 +47,6 @@ span {
   background-size: cover; 
 }
 
-
-footer span {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem; 
-  top: calc(0.5rem / 2);
-}
-
-footer a {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
 
 #icon-seach {
   background-image: url('./images/search.png');

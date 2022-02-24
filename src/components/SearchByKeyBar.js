@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { getActivityByKey } from '../helpers/getActivityByKey';
 import './SearchByKeyBar.css';
 
-export const SearchByKeyBar = ({setActivity}) => {
+export const SearchByKeyBar = ({activity,setActivity}) => {
 
     const [inputKey, setinputKey] = useState('');
 
@@ -10,8 +10,15 @@ export const SearchByKeyBar = ({setActivity}) => {
     
     const handleSubmit = (e) => {
       e.preventDefault(); //evitar que la pagina se actualize al presionar Enter en el input
-      getActivityByKey(inputKey)
-      .then(setActivity)    
+      if(inputKey.length == 7 ){
+        getActivityByKey(inputKey)
+        .then( ans => {
+          ans.error? setActivity({...activity , error: ans.error}) : setActivity(ans);
+        })   
+      }
+      else{
+        setActivity({...activity , error: "Key out of range"});
+      } 
     };
 
     return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { getfilterActivity } from '../helpers/getfilterActivity';
 import './Filter.css';
 
-export const Filter = ({setActivity}) => {
+export const Filter = ({activity,setActivity}) => {
 
     const [type, setType] = useState('');
     const [accessibility, setAccessibility] = useState('');
@@ -13,13 +13,14 @@ export const Filter = ({setActivity}) => {
     const handleSubmit = event => {
         event.preventDefault();
         getfilterActivity(type,accessibility,participants,price)
-            .then(setActivity);
+        .then( ans => {
+            ans.error? setActivity({...activity , error: ans.error}) : setActivity(ans);
+        })   
     };
 
 
     const handleChange = ({target},func) => func(target.value);
     
-
     return (
       <form className='filter-form' onSubmit={handleSubmit}>
           <div className='filter-form-inputs'>

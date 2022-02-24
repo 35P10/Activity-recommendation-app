@@ -4,7 +4,7 @@ import { SearchByKeyBar } from './SearchByKeyBar';
 import { Filter } from './Filter';
 import './Header.css';
 
-export const Header = ({setActivity}) => {
+export const Header = ({activity,setActivity}) => {
     const [searchdisplay, setsearchdisplay] = useState(false);
     const [filterDisplay, setfilterDisplay] = useState(false)
 
@@ -20,9 +20,9 @@ export const Header = ({setActivity}) => {
 
     return <header>
             <button onClick={handleDisplaySearchBar} className='search-by-key-button'><span id="icon-seach"></span></button>
-            { searchdisplay && <SearchByKeyBar setActivity={setActivity}/> }
+            { searchdisplay && <SearchByKeyBar activity={activity} setActivity={setActivity}/> }
             { (!searchdisplay && !filterDisplay) && <h1>WhyAreYouBored?</h1> }
-            { filterDisplay && <Filter setActivity={setActivity}/>}
+            { filterDisplay && <Filter activity={activity} setActivity={setActivity}/>}
             <button  onClick={handleDisplayFilter} className='search-by-filter-button'><span id="icon-filter"></span></button>
         </header>;
 };
